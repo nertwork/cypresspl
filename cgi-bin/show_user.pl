@@ -1,12 +1,16 @@
 #!/usr/bin/perl
 
 use Socket;
-use warnings;
+use strict;
+use CGI qw(:standard);
 
-my $remote_ip = inet_aton($ENV{'REMOTE_ADDR'});
-my $remote_hostname = gethostbyaddr($remote_ip, AF_INET); 
+print start_html;
+my ($remote_ip, $remote_hostname);
+
+$remote_hostname = gethostbyaddr(inet_aton($ENV{'REMOTE_ADDR'}), AF_INET); 
 
 print "Content-Type: text/html\n\n";
 print "Remote Hostname: ", $remote_hostname, "<br>\n";
 print "Remote IP: ", $ENV{'REMOTE_ADDR'}, "<br>\n";
 print "User Agent: ", $ENV{'HTTP_USER_AGENT'}, "<br>\n";
+print end_html;
