@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 
 use Socket;
-use warnings;
+use strict;
 
 print "Content-Type: text/html\n\n";
 
