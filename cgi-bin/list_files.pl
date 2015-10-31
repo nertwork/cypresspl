@@ -6,6 +6,7 @@ use warnings;
 print "Content-Type: text/html\n\n";
 
 my $dir = '../labs';
+my @files = ();
 
 opendir(DIR, $dir) or die $!;
 
@@ -13,10 +14,13 @@ while (my $file = readdir(DIR)) {
 
     # Use a regular expression to ignore files beginning with a period
     next if ($file =~ m/^\./);
-
-    print "<a href=labs/$file>$file</a>\n </br>";
-
+    push @files, $file;
 }
 
 closedir(DIR);
+
+foreach (sort @files) {
+    print "<a href=labs/$_>$_</a>\n </br>";
+}
+
 exit 0;
