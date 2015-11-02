@@ -28,7 +28,7 @@ table({-border=>'1',-width=>"100%"},
 ), hr, a({
 		-href=>"http://www.perl.org"},
 	img({
-			-src=>"olympics.jpg",
+			-src=>"../images/olympics.jpg",
 			-width=>"300",
 			-border=>"0",
 			-alt=>"Olympics"})
