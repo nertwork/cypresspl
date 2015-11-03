@@ -5,5 +5,5 @@ use CGI qw(:standard);
 print header, start_html;
 ($school, $unit, $cost) = ("Cypress College", 3, 17.5);
 $ammount = $unit * $cost;
-print "$unit units at $school at $cost each is \$$ammount";
+print "$unit units at $school at \$$cost each is \$$ammount";
 print end_html;
