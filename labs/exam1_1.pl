@@ -9,7 +9,7 @@ print p, submit(-name =>'Send');
 print end_form;
 if (param('weight')) {
 	$weight = param('weight') * 0.453592;
-	print "You selected ", $weight, "!<br>";
+	print "You weigh ", $weight, "kg!<br>";
 } else { }
 print end_html;
 
