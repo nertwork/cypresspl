@@ -6,7 +6,7 @@ if (!param("blood"))
 { 
 	print "<form action='$ENV{'SCRIPT_NAME'}' method='post'>\n";
 	print "What is your blood type? </br> \n<input type='text' name='blood'>\n";
-	print "<input type='Submit' value='check'>";
+	print "<input type='Submit'>";
 	print "</form>";
 } else {
 	my $blood_type = lc(param("blood"));
