@@ -29,7 +29,6 @@ if (!param) {
 				$temp = $x[$last];
 				$x[$last] = $x[$r];
 				$x[$r] = $temp;
-				175
 				$last--; }
 			$k++; }
 		for ($i=0; $i < 5; $i++) # display the drawing results
