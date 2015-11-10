@@ -11,7 +11,6 @@ while ($i <= 20)
 {
 	print "<span class= \'r\' style=\'width:" . $i . "px\'></span>$i";
 	$i++;
-	172
 }
 $i = 20;
 while ($i > 0)
