@@ -36,7 +36,7 @@ foreach (@x)
 }
 print hr;
 # hash
-%area = ("714", "Anahiem", "949", "Irvin", "818", "Torrance");
+%area = ("714", "Anahiem", "949", "Irvine", "818", "Torrance");
 print $area{"818"}, "<br>";
 print $area{949}, "<br>";
 print $area{'714'}, "<br>";
