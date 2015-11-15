@@ -49,7 +49,6 @@ for (my $i=0; $i < $size; $i++)
 		{
 			print $food[$i]->[$j]->[$k], " ";
 		}
-		207
 		print "\n<br>";
 	}
 }
@@ -72,4 +71,3 @@ print $cars[1]->[1]->[0], "\n<br>";
 print $cars[1]->[1]->[1], "\n<br>";
 print "</td></tr></table>";
 print end_html;
-
