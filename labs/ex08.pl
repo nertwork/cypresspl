@@ -4,11 +4,11 @@
 use CGI qw(:standard);
 print header, start_html;
 if ((param('first_int')) and (param('second_int'))) {
-	if (param('sub'))
+	if (param('math')=="Sub")
 	{
 		SUB(param('first_int'),param('second_int'));
 	}
-	if (param('add'))
+	if (param('math')=="Add")
 	{
 		ADD(param('first_int'),param('second_int'));
 	}
@@ -17,8 +17,12 @@ if ((param('first_int')) and (param('second_int'))) {
 print start_form(-action=>$ENV{SCRIPT_NAME}, -method=>'post');
 print "<p>First number: <input text='text' name='first_int' </p>\n",br;
 print "<p>Second number: <input text='text' name='second_int' </p>\n",br;
-print "<input type='submit' name='add' value='Add'>\n",br;
-print "<input type='submit' name='sub' value='Subtract'>\n";
+print radio_group(-name=>'math',
+	        -values=>["Add","Sub"],
+		-linebreak => 'true',
+		-default=>'Add');
+print p, submit(-value=>'Send');
+print end_form;
 }
 sub SUB {
 	$result = ($_[0] - $_[1]);
