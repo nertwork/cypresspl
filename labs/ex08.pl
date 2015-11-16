@@ -1,15 +1,15 @@
 #!/usr/bin/perl
-## File name: ex07.pl
+## File name: ex08.pl
 ## Student: James Farr
 use CGI qw(:standard);
 print header, start_html;
 if ((param('first_int')) and (param('second_int'))) {
 	my $math = param('math');
-	if ($math == 'Sub')
+	if ($math eq 'Sub')
 	{
 		SUB(param('first_int'),param('second_int'));
 	}
-	if ($math == 'Add')
+	if ($math eq 'Add')
 	{
 		ADD(param('first_int'),param('second_int'));
 	}
@@ -22,7 +22,7 @@ print radio_group(-name=>'math',
 	        -values=>["Add","Sub"],
 		-linebreak => 'true',
 		-default=>'Add');
-print p, submit();
+print submit();
 print end_form;
 }
 sub SUB {
