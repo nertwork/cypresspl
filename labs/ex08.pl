@@ -4,11 +4,12 @@
 use CGI qw(:standard);
 print header, start_html;
 if ((param('first_int')) and (param('second_int'))) {
-	if (param('math')=="Sub")
+	my $math = param('math');
+	if ($math == 'Sub')
 	{
 		SUB(param('first_int'),param('second_int'));
 	}
-	if (param('math')=="Add")
+	if ($math == 'Add')
 	{
 		ADD(param('first_int'),param('second_int'));
 	}
@@ -21,7 +22,7 @@ print radio_group(-name=>'math',
 	        -values=>["Add","Sub"],
 		-linebreak => 'true',
 		-default=>'Add');
-print p, submit(-value=>'Send');
+print p, submit();
 print end_form;
 }
 sub SUB {
