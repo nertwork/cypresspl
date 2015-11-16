@@ -3,7 +3,7 @@
 ## Student: James Farr
 use CGI qw(:standard);
 print header, start_html;
-if ((param('frist_int')) and (param('second_int'))) {
+if ((param('first_int')) and (param('second_int'))) {
 	if (param('sub'))
 	{
 		SUB(param('first_int'),param('second_int'));
@@ -15,8 +15,8 @@ if ((param('frist_int')) and (param('second_int'))) {
 	
 }else{
 print start_form(-action=>$ENV{SCRIPT_NAME}, -method=>'post');
-print "<p>First number: <input text='text' name='first_int'\n",br;
-print "<p>Second number: <input text='text' name='second_int'\n",br;
+print "<p>First number: <input text='text' name='first_int' </p>\n",br;
+print "<p>Second number: <input text='text' name='second_int' </p>\n",br;
 print "<input type='submit' name='add' value='Add'>\n",br;
 print "<input type='submit' name='sub' value='Subtract'>\n";
 }
@@ -26,6 +26,6 @@ sub SUB {
 }
 sub ADD {
 	$result = ($_[0] + $_[1]);
-	print "The difference is $result";
+	print "The sum is $result";
 }
 print end_html;
