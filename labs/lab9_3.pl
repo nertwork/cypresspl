@@ -24,7 +24,6 @@ for ($i = 0; $i < $s; $i++)
 print hr;
 @x = ( [1, 2, 3, 4],
 	["one", "two", "three", "four"],
-	255
 	['ichi', 'nii', 'san', 'shi'],
 );
 $p = \@x;
