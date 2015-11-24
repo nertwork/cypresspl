@@ -20,4 +20,3 @@ if (param) {
 	print $p->($n);
 }
 print end_html;
-
