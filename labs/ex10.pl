@@ -12,7 +12,7 @@ if (!param('sentence'))
 	print "</form>";
 } else {
 	my $sentence = param('sentence');
-	my $sentence =~ tr/a-z/A-Z/;
+	$sentence =~ tr/a-z/A-Z/;
 	print $sentence;
 }
 
