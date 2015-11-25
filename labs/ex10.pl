@@ -7,7 +7,7 @@ print header, start_html;
 if (!param('sentence'))
 { 
 	print "<form action='$ENV{'SCRIPT_NAME'}' method='post'>\n";
-	print "Enter a sentence: <input type='text' name='sentence'>\n";
+	print "Enter a sentence: <input type='text' name='sentence' cols='60'>\n";
 	print "<input type='Submit'>";
 	print "</form>";
 } else {
