@@ -12,7 +12,8 @@ if (!param('sentence'))
 	print "</form>";
 } else {
 	my $sentence = param('sentence');
-	print $sentence =~ tr/a-z/A-Z/;
+	$sentence =~ tr/a-z/A-Z/;
+	print $sentence;
 }
 
 print end_html;
